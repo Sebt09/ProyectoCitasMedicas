@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7addd15-ca35-48ac-8f20-64810cb972e1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/data/Model/Cita.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/data/Model/Consulta.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/data/Model/Medico.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/data/Model/Paciente.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/data/Model/Pago.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/data/Model/Tratamiento.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/data/Network/ApiService.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/data/Network/RetrofitClient.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/ui/Citas/citasActivity.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/res/layout/activity_citas.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontendCitasMedicas/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontendCitasMedicas/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontendCitasMedicas/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FrontendCitasMedicas/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

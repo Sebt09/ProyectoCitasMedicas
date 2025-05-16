@@ -21,6 +21,7 @@ public class Paciente {
     private long id_paciente;
     private String nombre;
     private String apellido;
+    private String numero_identificacion;
     private LocalDate fecha_nacimiento;
     private String correo;
     private String telefono;
