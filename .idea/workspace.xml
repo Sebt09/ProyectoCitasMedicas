@@ -5,7 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7addd15-ca35-48ac-8f20-64810cb972e1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/FrontendCitasMedicas/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FrontendCitasMedicas/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Model/Medico.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Model/Pago.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Model/Tratamiento.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Repository/CitaRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Repository/ConsultaRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Repository/MedicoRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Repository/PagoRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Repository/TratamientoRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen/CitaFormScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen/ConsultaFormScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen/MedicoFormScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen/MedicoScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen/PagoFormScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen/PagoScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen/TratamientoFormScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen/TratamientoScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Service/CitaService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Service/ConsultaService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Service/MedicoService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Service/PagoService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Service/TratamientoService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/ViewModel/CitaViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/ViewModel/ConsultaViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/ViewModel/MedicoViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/ViewModel/PagoViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/ViewModel/TratamientoViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Model/Cita.kt" beforeDir="false" afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Model/Cita.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Model/Consulta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Model/Consulta.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen/CitaScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen/CitaScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen/ConsultaScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen/ConsultaScreen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +46,23 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/FrontendCitasMedicas">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -33,10 +82,11 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:Sebt09/ProyectoCitasMedicas.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/Sebt09/ProyectoCitasMedicas.git&quot;,
     &quot;accountId&quot;: &quot;fc1a890d-9ece-4307-a830-dbd6f510af5b&quot;
   }
 }</component>
+  <component name="KotlinScriptingSettings" supportWarning="false" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -45,27 +95,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu/home/zamii/proyectoLineaIII/ProyectoCitasMedicas&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.Unnamed.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/sergi/OneDrive/Documentos/ProyectoCitasMedicas/FrontendCitasMedicas/app/src/main/java/com/example/frontcitasmedicas/Screen",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sergi\OneDrive\Documentos\ProyectoCitasMedicas\FrontendCitasMedicas\app\src\main\java\com\example\frontcitasmedicas\Screen" />
+      <recent name="C:\Users\sergi\OneDrive\Documentos\ProyectoCitasMedicas\FrontendCitasMedicas\app\src\main\java\com\example\frontcitasmedicas\ViewModel" />
+      <recent name="C:\Users\sergi\OneDrive\Documentos\ProyectoCitasMedicas\FrontendCitasMedicas\app\src\main\java\com\example\frontcitasmedicas\Repository" />
+      <recent name="C:\Users\sergi\OneDrive\Documentos\ProyectoCitasMedicas\FrontendCitasMedicas\app\src\main\java\com\example\frontcitasmedicas\Service" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu\home\zamii\proyectoLineaIII\ProyectoCitasMedicas\FrontendCitasMedicas\app\src\main\java\com\example\frontcitasmedicas\ui" />
       <recent name="\\wsl.localhost\Ubuntu\home\zamii\proyectoLineaIII\ProyectoCitasMedicas\FrontendCitasMedicas\app\src\main\java\com\example\frontcitasmedicas\data\Model" />
@@ -89,6 +150,8 @@
       <updated>1746579614446</updated>
       <workItem from="1746579615514" duration="1000000" />
       <workItem from="1747016372052" duration="1998000" />
+      <workItem from="1747612256118" duration="1569000" />
+      <workItem from="1747613898435" duration="4813000" />
     </task>
     <servers />
   </component>

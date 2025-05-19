@@ -13,10 +13,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.frontcitasmedicas.Model.Paciente
-import com.example.frontcitasmedicas.Screen.PacienteFormScreen
-import com.example.frontcitasmedicas.Screen.PacienteScreen
-import com.example.frontcitasmedicas.ui.theme.FrontCitasMedicasTheme
+import com.example.frontcitasmedicas.Screen.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,39 +37,107 @@ fun AppNavigation() {
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = "pacientes") {
-        // Pantalla principal de pacientes
+
+        // Pacientes
         composable("pacientes") {
             PacienteScreen(
-                onEditar = { paciente ->
-                    navController.navigate("editar/${paciente.id_paciente}")
-                },
-                onRegistrar = {
-                    navController.navigate("registrar")
-                },
-                onBuscar = {
-                    // Implementar lógica de búsqueda personalizada si es necesario
-                }
+                onEditar = { paciente -> navController.navigate("editarPaciente/${paciente.id_paciente}") },
+                onRegistrar = { navController.navigate("registrarPaciente") }
             )
         }
-
-        // Formulario para crear nuevo paciente
-        composable("registrar") {
-            PacienteFormScreen(
-                onBack = { navController.popBackStack() }
-            )
+        composable("registrarPaciente") {
+            PacienteFormScreen(onBack = { navController.popBackStack() })
         }
-
-        // Formulario para editar paciente (con id)
-        composable("editar/{id}") { backStackEntry ->
+        composable("editarPaciente/{id}") { backStackEntry ->
             val id = backStackEntry.arguments?.getString("id")?.toLongOrNull()
             if (id != null) {
-                PacienteFormScreen(
-                    pacienteId = id,
-                    onBack = { navController.popBackStack() }
-                )
+                PacienteFormScreen(pacienteId = id, onBack = { navController.popBackStack() })
             }
         }
 
-        // mas rutas
+        // Medicos
+        composable("medicos") {
+            MedicoScreen(
+                onEditar = { medico -> navController.navigate("editarMedico/${medico.id_medico}") },
+                onRegistrar = { navController.navigate("registrarMedico") }
+            )
+        }
+        composable("registrarMedico") {
+            MedicoFormScreen(onBack = { navController.popBackStack() })
+        }
+        composable("editarMedico/{id}") { backStackEntry ->
+            val id = backStackEntry.arguments?.getString("id")?.toLongOrNull()
+            if (id != null) {
+                MedicoFormScreen(medicoId = id, onBack = { navController.popBackStack() })
+            }
+        }
+
+        // Pagos
+        composable("pagos") {
+            PagoScreen(
+                onEditar = { pago -> navController.navigate("editarPago/${pago.id_pago}") },
+                onRegistrar = { navController.navigate("registrarPago") }
+            )
+        }
+        composable("registrarPago") {
+            PagoFormScreen(onBack = { navController.popBackStack() })
+        }
+        composable("editarPago/{id}") { backStackEntry ->
+            val id = backStackEntry.arguments?.getString("id")?.toLongOrNull()
+            if (id != null) {
+                PagoFormScreen(pagoId = id, onBack = { navController.popBackStack() })
+            }
+        }
+
+        // Tratamientos
+        composable("tratamientos") {
+            TratamientoScreen(
+                onEditar = { tratamiento -> navController.navigate("editarTratamiento/${tratamiento.id_tratamiento}") },
+                onRegistrar = { navController.navigate("registrarTratamiento") }
+            )
+        }
+        composable("registrarTratamiento") {
+            TratamientoFormScreen(onBack = { navController.popBackStack() })
+        }
+        composable("editarTratamiento/{id}") { backStackEntry ->
+            val id = backStackEntry.arguments?.getString("id")?.toLongOrNull()
+            if (id != null) {
+                TratamientoFormScreen(tratamientoId = id, onBack = { navController.popBackStack() })
+            }
+        }
+
+        // Citas
+        composable("citas") {
+            CitaScreen(
+                onEditar = { cita -> navController.navigate("editarCita/${cita.id_cita}") },
+                onRegistrar = { navController.navigate("registrarCita") }
+            )
+        }
+        composable("registrarCita") {
+            CitaFormScreen(onBack = { navController.popBackStack() })
+        }
+        composable("editarCita/{id}") { backStackEntry ->
+            val id = backStackEntry.arguments?.getString("id")?.toLongOrNull()
+            if (id != null) {
+                CitaFormScreen(citaId = id, onBack = { navController.popBackStack() })
+            }
+        }
+
+        // Consultas
+        composable("consultas") {
+            ConsultaScreen(
+                onEditar = { consulta -> navController.navigate("editarConsulta/${consulta.id_consulta}") },
+                onRegistrar = { navController.navigate("registrarConsulta") }
+            )
+        }
+        composable("registrarConsulta") {
+            ConsultaFormScreen(onBack = { navController.popBackStack() })
+        }
+        composable("editarConsulta/{id}") { backStackEntry ->
+            val id = backStackEntry.arguments?.getString("id")?.toLongOrNull()
+            if (id != null) {
+                ConsultaFormScreen(consultaId = id, onBack = { navController.popBackStack() })
+            }
+        }
     }
 }
