@@ -3,7 +3,7 @@ package com.example.frontcitasmedicas.Screen
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.*
+import androidx.compose.material3.* // Asegúrate de que este import sea para Material 3
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -12,6 +12,7 @@ import com.example.frontcitasmedicas.Model.Consulta
 import com.example.frontcitasmedicas.ViewModel.ConsultaViewModel
 import kotlinx.coroutines.launch
 
+@OptIn(ExperimentalMaterial3Api::class) // <--- ¡Agrega esta línea aquí!
 @Composable
 fun ConsultaScreen(
     viewModel: ConsultaViewModel = viewModel(),
@@ -27,7 +28,7 @@ fun ConsultaScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(title = { Text("Consultas") })
+            TopAppBar(title = { Text("Consultas") }) // Esta es la API experimental
         },
     ) { padding ->
         Column(modifier = Modifier.padding(padding).padding(16.dp)) {

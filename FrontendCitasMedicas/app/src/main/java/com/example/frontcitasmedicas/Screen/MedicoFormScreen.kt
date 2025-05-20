@@ -1,5 +1,6 @@
 package com.example.frontcitasmedicas.Screen
 
+import android.util.Log // Importa Log para depuración, si lo necesitas
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -18,11 +19,36 @@ fun MedicoFormScreen(
     val medico by viewModel.medicoActual.collectAsState()
     val isEditing = medicoId != null
 
+    // 1. Observa el nuevo StateFlow de `operacionCompletada`
+    val operacionCompletada by viewModel.operacionCompletada.collectAsState()
+
     LaunchedEffect(medicoId) {
         if (isEditing) {
             viewModel.obtenerMedicoPorId(medicoId!!)
         } else {
             viewModel.limpiarFormulario()
+        }
+    }
+
+    // 2. Usa LaunchedEffect para reaccionar a `operacionCompletada`
+    LaunchedEffect(operacionCompletada) {
+        when (operacionCompletada) {
+            true -> {
+                // La operación fue exitosa, ahora podemos navegar de vuelta
+                onBack()
+                // Es crucial resetear el estado para que no se dispare de nuevo
+                viewModel.resetOperacionCompletada()
+                Log.d("MedicoFormScreen", "Navegando de vuelta después de operación exitosa.")
+            }
+            false -> {
+                // La operación falló, puedes mostrar un Snackbar o un mensaje de error
+                Log.e("MedicoFormScreen", "La operación de guardar/actualizar falló.")
+                // También resetea el estado para permitir futuros intentos
+                viewModel.resetOperacionCompletada()
+            }
+            null -> {
+                // Estado inicial o reseteado, no hacemos nada
+            }
         }
     }
 
@@ -82,14 +108,17 @@ fun MedicoFormScreen(
                     if (isEditing) {
                         viewModel.actualizarMedico()
                     } else {
-                        viewModel.crearMedico()
+                        // Asegúrate de que esta función exista en tu MedicoViewModel y sea `agregarMedico()`
+                        // o cambia el nombre aquí a `agregarMedico()` si es la función correcta.
+                        viewModel.agregarMedico() // Asumo que `crearMedico` es `agregarMedico` en tu ViewModel
                     }
-                    onBack()
+                    // 3. Ya no llamamos a onBack() directamente aquí
                 }
             ) {
                 Text(text = if (isEditing) "Actualizar" else "Guardar")
             }
 
+            // El botón de cancelar sigue navegando de inmediato
             OutlinedButton(onClick = onBack) {
                 Text("Cancelar")
             }

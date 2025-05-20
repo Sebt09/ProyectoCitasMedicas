@@ -7,7 +7,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -15,6 +14,8 @@ import com.example.frontcitasmedicas.Model.Cita
 import com.example.frontcitasmedicas.ViewModel.CitaViewModel
 import kotlinx.coroutines.launch
 
+
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CitaScreen(
     viewModel: CitaViewModel = viewModel(),
@@ -25,7 +26,7 @@ fun CitaScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val coroutineScope = rememberCoroutineScope()
 
-    LaunchedEffect(true) {
+    LaunchedEffect(Unit) {
         viewModel.cargarCitas()
     }
 
@@ -42,7 +43,12 @@ fun CitaScreen(
             )
         },
     ) { padding ->
-        Column(modifier = Modifier.padding(padding).padding(16.dp)) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
+                .padding(16.dp)
+        ) {
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 items(citas) { cita ->
                     Card(
@@ -52,9 +58,12 @@ fun CitaScreen(
                     ) {
                         Column(modifier = Modifier.padding(16.dp)) {
                             Text("Fecha y Hora: ${cita.fecha_hora}")
-                            Text("Paciente: ${cita.paciente.nombre} ${cita.paciente.apellido}")
-                            Text("Médico: ${cita.medico.nombre} ${cita.medico.apellido}")
+                            // Corrección para manejar pacientes y médicos nulos
+                            Text("Paciente: ${cita.paciente?.nombre ?: "N/A"} ${cita.paciente?.apellido ?: ""}")
+                            Text("Médico: ${cita.medico?.nombre ?: "N/A"} ${cita.medico?.apellido ?: ""}")
                             Text("Estado: ${cita.estado}")
+
+                            Spacer(modifier = Modifier.height(8.dp))
 
                             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                                 Button(onClick = { onEditar(cita) }) {

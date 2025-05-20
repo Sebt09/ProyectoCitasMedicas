@@ -15,6 +15,7 @@ import com.example.frontcitasmedicas.Model.Tratamiento
 import com.example.frontcitasmedicas.ViewModel.TratamientoViewModel
 import kotlinx.coroutines.launch
 
+@OptIn(ExperimentalMaterial3Api::class) // <--- Agrega esta línea aquí para TopAppBar
 @Composable
 fun TratamientoScreen(
     viewModel: TratamientoViewModel = viewModel(),
@@ -60,6 +61,8 @@ fun TratamientoScreen(
                             Text("Descripción: ${tratamiento.descripcion}")
                             Text("Frecuencia: ${tratamiento.frecuencia}")
                             Text("Duración: ${tratamiento.duracion}")
+                            // Ejemplo de cómo mostrar la consulta si no es nula
+                            // Text("Consulta ID: ${tratamiento.consulta?.id_consulta ?: "N/A"}")
 
                             Spacer(modifier = Modifier.height(8.dp))
 

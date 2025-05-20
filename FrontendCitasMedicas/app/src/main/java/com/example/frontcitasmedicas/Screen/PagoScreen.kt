@@ -15,6 +15,7 @@ import com.example.frontcitasmedicas.Model.Pago
 import com.example.frontcitasmedicas.ViewModel.PagoViewModel
 import kotlinx.coroutines.launch
 
+@OptIn(ExperimentalMaterial3Api::class) // <--- Agrega esta línea aquí para TopAppBar
 @Composable
 fun PagoScreen(
     viewModel: PagoViewModel = viewModel(),
@@ -47,6 +48,12 @@ fun PagoScreen(
                 .padding(padding)
                 .padding(16.dp)
         ) {
+            // Manejo de paciente nulo:
+            // Tu modelo `Pago` tiene `paciente: Paciente? = null`.
+            // Si en algún momento decides mostrar el nombre del paciente aquí,
+            // asegúrate de usar el operador de navegación segura `?.` y Elvis `?:`
+            // Ejemplo: Text("Paciente: ${pago.paciente?.nombre ?: "N/A"}")
+
             LazyColumn {
                 items(pagos) { pago ->
                     Card(
@@ -60,6 +67,8 @@ fun PagoScreen(
                             Text("Monto: ${pago.monto}")
                             Text("Método: ${pago.metodo_pago}")
                             Text("Referencia: ${pago.referencia}")
+                            // Ejemplo de cómo mostrar el paciente si no es nulo
+                            Text("Paciente: ${pago.paciente?.nombre ?: "N/A"} ${pago.paciente?.apellido ?: ""}")
 
                             Spacer(modifier = Modifier.height(8.dp))
 
